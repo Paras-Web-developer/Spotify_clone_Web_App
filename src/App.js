@@ -1,6 +1,9 @@
 import React from "react";
-import primium from "./Pages/primium";
+import Routing from "./Routes/routing"
+
 
 export default function App() {
-  return <></>;
+  return <>
+  <Routing />
+  </>;
 }
