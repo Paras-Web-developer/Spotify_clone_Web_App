@@ -2,8 +2,9 @@ import React from "react";
 // import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import styled from "styled-components";
-import logo from "../Assests/images/spotify.png";
 import modellogo from "../Assests/images/modellogo.png";
+import Logo from "../Component/logo";
+import { NavLink } from "react-router-dom";
 import {
   button1,
   button2,
@@ -19,10 +20,20 @@ import ButtonDiv from "../Component/button";
 import Input from "../Component/inputField";
 export default function Navbar() {
   const Navbar = styled.div`
-    img {
-      background-color: white;
-      width: 60px;
-      margin-left: 3.5rem;
+    Logo {
+      img {
+        margin-left: 1rem;
+      }
+    }
+    a {
+      list-style: none;
+      color: white;
+      font-weight: 700;
+      text-decoration: none;
+      &:hover {
+        color: #1ed760;
+        cursor: pointer;
+      }
     }
     li {
       list-style: none;
@@ -143,14 +154,11 @@ export default function Navbar() {
       {/* navbar start */}
       <Navbar>
         <nav className="navbar bg-black d-flex justify-content-between align-items-center">
-          <div className="left d-flex align-items-center">
-            <img src={logo} alt="" />
-            <h2 className="text-white fs-4">Spotify</h2>
-          </div>
+          <Logo />
           <div className="right d-flex w-50 justify-content-evenly ">
-            <li>Premium</li>
+            <NavLink to="/">Premium</NavLink>
             <li>Support</li>
-            <li>Download</li>
+            <NavLink to="/download">Download</NavLink>
             <li>|</li>
             <li onClick={handleShow}>Sign up</li>
             <li>Log In</li>
