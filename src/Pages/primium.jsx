@@ -1,7 +1,20 @@
 import React from "react";
 import styled from "styled-components";
 import PowerCard from "../Component/card";
-import { card1, card2, card3, card4 } from "../Data/Data";
+import PlansCard from "../Component/plansCard";
+// import Button from "../Component/button";
+// import { button1, button2 } from "../Data/Data";
+import { Amex, clubimg, Paytm, upi, visa, master } from "../Utils/images";
+import {
+  card1,
+  card2,
+  card3,
+  card4,
+  plansCard1,
+  plansCard2,
+  plansCard3,
+  plansCard4,
+} from "../Data/Data";
 export default function primium() {
   // color variables Start
   let textBlack = "black";
@@ -25,6 +38,13 @@ export default function primium() {
         color: ${textWhite};
         border-radius: 50px;
         text-transform: uppercase;
+        margin: 5px;
+        transition: all 0.1s ease-in;
+        &:hover {
+          transform: scale(1.05);
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+          cursor: pointer;
+        }
       }
       #plansBtn1 {
         border: 2px solid black;
@@ -33,7 +53,8 @@ export default function primium() {
         font-weight: bold;
 
         &:hover {
-          font-size: 17px;
+          transform: scale(1.05);
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
         }
       }
       #plansBtn2 {
@@ -44,7 +65,8 @@ export default function primium() {
         font-weight: bold;
 
         &:hover {
-          font-size: 17px;
+          transform: scale(1.05);
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
         }
       }
       h6 {
@@ -66,7 +88,44 @@ export default function primium() {
       justify-content: space-evenly;
       /* margin: 5rem; */
     }
+    // primium page 2 css start
   `;
+  // primium page 3 css start
+  const Page3 = styled.section`
+    .card_bottom {
+      width: 60%;
+      margin: 1rem auto 4rem;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease-in-out;
+      /* &:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+      } */
+    }
+    button {
+      background-color: transparent;
+      border: 2px solid ${textBlack};
+      padding: 12px 25px;
+      font-size: 15px;
+      font-weight: bold;
+      margin-left: 1rem;
+      border-radius: 50px;
+      transition: all 0.2s ease-in;
+
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+      }
+    }
+    img {
+      width: 32px;
+      height: 22px;
+      margin: 0 4px;
+    }
+  `;
+  // primium page 3 css end
 
   return (
     <>
@@ -81,6 +140,8 @@ export default function primium() {
                 anytime.
               </p>
               <button id="plansBtn1">get started</button>
+              {/* <Button props={button1} /> */}
+              {/* <Button props={button2} /> */}
 
               <button id="plansBtn2">see other plans</button>
 
@@ -104,6 +165,39 @@ export default function primium() {
           <PowerCard props={card4} />
         </div>
       </Page2>
+      {/* page 2 end */}
+      {/* page 3 start */}
+      <Page3>
+        <main>
+          <div className="text-center">
+            <h1>Pick your Premium</h1>
+            <p>
+              Listen without limits on your phone, speaker, and other devices.
+            </p>
+            <div className="d-flex justify-content-center">
+              <img src={upi} alt="" />
+              <img src={Paytm} alt="" />
+              <img src={visa} alt="" />
+              <img src={master} alt="" />
+              <img src={Amex} alt="" />
+              <img src={clubimg} alt="" />
+            </div>
+          </div>
+          <section className="d-flex justify-content-evenly p-5">
+            <PlansCard props={plansCard1}></PlansCard>
+            <PlansCard props={plansCard2}></PlansCard>
+            <PlansCard props={plansCard3}></PlansCard>
+            <PlansCard props={plansCard4}></PlansCard>
+          </section>
+          <div className=" card_bottom text-center p-3 border">
+            <h4 className="d-inline">
+              Special discount for eligible students in university
+            </h4>
+            <button className="d-inline">LEARN MORE</button>
+          </div>
+        </main>
+      </Page3>
+      {/* page 3 end */}
     </>
   );
 }
