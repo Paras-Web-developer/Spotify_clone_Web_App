@@ -14,9 +14,9 @@ export default function Login({ setPrivate }) {
   const handleShow = () => setShow(true);
   return (
     <>
-      <li variant="primary" onClick={handleShow}>
+      <h6 variant="primary" onClick={handleShow} className="mt-1">
         Login
-      </li>
+      </h6>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Body>
