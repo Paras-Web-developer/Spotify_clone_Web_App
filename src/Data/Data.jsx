@@ -93,6 +93,21 @@ const input7 = {
   max: 31,
 };
 
+const email = {
+  label: "Enter your email",
+  id: "email",
+  type: "email",
+  placeholder: "Enter your email.",
+  name:"email"
+};
+const password = {
+  label: "Enter your password",
+  id: "password",
+  type: "password",
+  placeholder: "Enter your Password.",
+  name:"password"
+};
+
 // Login input data end
 
 // footer data start
@@ -211,6 +226,8 @@ export {
   input5,
   input6,
   input7,
+  email,
+  password,
   // list1,
   // list2,
   // list3,
@@ -218,4 +235,5 @@ export {
   plansCard2,
   plansCard3,
   plansCard4,
+  
 };
