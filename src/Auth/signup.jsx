@@ -1,6 +1,7 @@
 import React from "react";
 import modellogo from "../Assests/images/modellogo.png";
 import styled from "styled-components";
+import { Form, Formik } from "formik";
 import {
   button1,
   button2,
@@ -47,6 +48,10 @@ const Signup = ({ handleClose }) => {
   return (
     <>
       <Section>
+      <Formik
+            initialValues={""}
+            validate={(values) => {
+            }}>
         <div className="d-flex flex-column justify-content-center p-3 align-items-center">
           <div className="d-flex align-items-center">
             <img src={modellogo} alt="" className="rounded-circle w-25" />
@@ -81,6 +86,7 @@ const Signup = ({ handleClose }) => {
               <p className="m-3">or</p>
               <span className="text-secondary">______________________</span>
             </div>
+<Form>
             <div>
               <Input props={input1}></Input>
               <Input props={input2}></Input>
@@ -92,7 +98,6 @@ const Signup = ({ handleClose }) => {
                 <Input props={input6}></Input>
                 <Input props={input7}></Input>
               </div>
-
               <p className="profile p-3 ps-0 fw-medium text-gray">
                 This appears on your profile.
               </p>
@@ -178,8 +183,10 @@ const Signup = ({ handleClose }) => {
                 </div>
               </div>
             </div>
+            </Form>
           </div>
         </div>
+        </Formik>
       </Section>
     </>
   );
