@@ -47,7 +47,7 @@ export default function routing({ isPrivate, setPrivate }) {
             <Route path="/download" element={<Download />}></Route>
           </Route>
           <Route element={<Private prop={prop} />}>
-            <Route path="/layout" element={<Layout />}>
+            <Route path="/layout" element={<Layout setPrivate={setPrivate} />}>
               <Route path="*" element={<Error />}></Route>
               <Route path="/layout/main" element={<Main />}></Route>
               <Route path="/layout/search" element={<Search />}></Route>

@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
 import leftArrow from "../Assests/images/back.png";
 import rightArrow from "../Assests/images/next.png";
 import styled from "styled-components";
-export default function privateheader() {
-    const Navbar = styled.nav`
+export default function privateheader({ setPrivate }) {
+  function logout() {
+    setPrivate(false);
+    alert("Logout Successfull");
+  }
+
+  const Navbar = styled.nav`
     background-color: transparent;
 
     position: sticky;
@@ -27,15 +32,18 @@ export default function privateheader() {
   `;
   return (
     <>
-        <Navbar>
+      <Navbar>
         <nav className="d-flex justify-content-between pt-3 ps-4 pe-4">
           <div className="left">
             <img src={leftArrow} alt="" />
             <img src={rightArrow} alt="" />
           </div>
           <div className="right d-flex justify-content-center align-items-center">
-            <button className="rounded-5 pt-1 pb-1 ps-2 pe-2 me-3 border-1 border-white bg-transparent text-white">
-              Upgrade
+            <button
+              className="rounded-5 pt-1 pb-1 ps-2 pe-2 me-3 border-1 border-white bg-transparent text-white"
+              onClick={logout}
+            >
+              Logout
             </button>
             <div>
               <select
@@ -53,12 +61,11 @@ export default function privateheader() {
                 <option value="" className="border-bottom">
                   Setting
                 </option>
-                <option value="">Logout</option>
               </select>
             </div>
           </div>
         </nav>
       </Navbar>
     </>
-  )
+  );
 }

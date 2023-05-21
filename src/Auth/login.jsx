@@ -40,9 +40,11 @@ export default function Login({ setPrivate }) {
                 email === localStorage.getItem("email") &&
                 password === localStorage.getItem("password")
               ) {
-                setPrivate(true);
+                setTimeout(() => {
+                  setPrivate(true);
+                  alert("Login Succesful Enjoy Music");
+                }, 2000);
               } else {
-                console.log("wrong credentials");
               }
             }}
           >

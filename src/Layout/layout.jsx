@@ -9,7 +9,7 @@ import Header from "./privateheader";
 import { Outlet } from "react-router-dom";
 // import Nav from "../Component/navbar";
 
-export default function layout() {
+export default function layout({setPrivate}) {
   const Playlist = styled.section`
     /* height: 70vh; */
     width: 79%;
@@ -29,7 +29,7 @@ export default function layout() {
         <Aside />
       </div>
       <Playlist>
-        <Header />
+        <Header  setPrivate={setPrivate}/>
         <Outlet></Outlet>
         <Footer />
       </Playlist>
