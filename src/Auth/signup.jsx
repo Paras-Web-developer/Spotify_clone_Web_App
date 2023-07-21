@@ -58,7 +58,7 @@ const Signup = ({ handleClose }) => {
             day:"",
           }}
           onSubmit={(values, actions) => {}}
-          validate={(values) => {console.log(values)}}
+          validate={(values) => {}}
         >
           <div className="d-flex flex-column justify-content-center p-3 align-items-center">
             <div className="d-flex align-items-center">
