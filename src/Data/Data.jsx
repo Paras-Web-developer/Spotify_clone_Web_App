@@ -49,6 +49,7 @@ const button2 = {
 
 const input1 = {
   label: "What's your email?",
+  name: "email",
   id: "email",
   type: "email",
   placeholder: "Enter your email.",
@@ -56,18 +57,21 @@ const input1 = {
 const input2 = {
   label: "Confirm your email",
   id: "email",
+  name: "email",
   type: "email",
   placeholder: "Enter your email again.",
 };
 const input3 = {
   label: "Create a password",
   id: "password",
+  name: "password",
   type: "password",
   placeholder: "Create a password",
 };
 const input4 = {
   label: "What should we call you?",
   id: "text",
+  name: "text",
   type: "text",
   placeholder: "Enter a profile name.",
 };
@@ -76,19 +80,22 @@ const input5 = {
   label: "Year",
   id: "year",
   type: "year",
+  name: "year",
   placeholder: "YYYY",
 };
 const input6 = {
   label: "Month",
   id: "year",
   type: "month",
+  name:"month",
   placeholder: "Month",
 };
 const input7 = {
   label: "Day",
-  id: "year",
+  id: "Day",
   type: "number",
   placeholder: "DD",
+  name: "day",
   min: 1,
   max: 31,
 };
@@ -98,14 +105,14 @@ const email = {
   id: "email",
   type: "email",
   placeholder: "Enter your email.",
-  name:"email"
+  name: "email",
 };
 const password = {
   label: "Enter your password",
   id: "password",
   type: "password",
   placeholder: "Enter your Password.",
-  name:"password"
+  name: "password",
 };
 
 // Login input data end
@@ -235,5 +242,4 @@ export {
   plansCard2,
   plansCard3,
   plansCard4,
-  
 };

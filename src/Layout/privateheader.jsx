@@ -52,7 +52,7 @@ export default function privateheader({ setPrivate }) {
                 className="rounded-5 me-3 pt-1 pb-1 border-1 border-white bg-transparent text-white"
               >
                 <img src={leftArrow} alt="" />
-                <option value="">Paras Grover</option>
+                <option value="">Paras</option>
                 <option value="">Account</option>
                 <option value="">Profile</option>
                 <option value="">Upgrade to Premium</option>

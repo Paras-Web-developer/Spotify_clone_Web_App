@@ -43,8 +43,9 @@ export default function Login({ setPrivate }) {
                 setTimeout(() => {
                   setPrivate(true);
                   alert("Login Succesful Enjoy Music");
-                }, 2000);
+                }, 1000);
               } else {
+                alert("Please Enter valid User Password");
               }
             }}
           >

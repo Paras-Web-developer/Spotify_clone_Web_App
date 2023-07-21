@@ -142,9 +142,7 @@ export default function primium() {
               <button id="plansBtn1">get started</button>
               {/* <Button props={button1} /> */}
               {/* <Button props={button2} /> */}
-
               <button id="plansBtn2">see other plans</button>
-
               <h6>
                 <span>Terms and conditions apply.</span> 1 month free not
                 available for users who have already tried Premium.
